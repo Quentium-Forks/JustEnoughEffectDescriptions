@@ -8,9 +8,9 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: "${project.forgegradle_version}", changing: true
-        classpath "org.spongepowered:mixingradle:${project.mixingradle_version}"
-        classpath "org.parchmentmc:librarian:${project.librarian_version}"
+        classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "5.1.+", changing: true
+        classpath group: "org.parchmentmc", name: "librarian", version: "1.+", changing: true
+        classpath group: "org.spongepowered", name: "mixingradle", version: "0.7.+", changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -133,19 +133,11 @@ dependencies {
 
     minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
 
-    // implementation fg.deobf("curse.maven:configured-457570:3640884")
-   // compileOnly fg.deobf("mezz.jei:jei-1.19-common-api:11.5.0.297")
-   // compileOnly fg.deobf("mezz.jei:jei-1.19-forge-api:11.5.0.297")
-    //runtimeOnly fg.deobf("mezz.jei:jei-1.19-forge:11.5.0.297")
-     //implementation fg.deobf("fuzs.puzzleslib:puzzleslib-forge:4.2.12")
-    // implementation fg.deobf("fuzs.stylisheffects:stylisheffects-forge:4.3.2")
-     implementation fg.deobf("curse.maven:stylish-effects-543661:4030138")
-     implementation fg.deobf("curse.maven:puzzles-lib-495476:4041202")
-     implementation fg.deobf("curse.maven:jei-238222:4239206")
+    implementation fg.deobf("curse.maven:stylish-effects-543661:4030905")
+    implementation fg.deobf("curse.maven:puzzles-lib-495476:4449586")
+    implementation fg.deobf("curse.maven:jei-238222:4405393")
 
-    // implementation fg.deobf("curse.maven:crimson-nbt-tags-445260:3670163")
-
-    annotationProcessor "org.spongepowered:mixin:${project.mixin_version}:processor"
+    annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }
 
 repositories {

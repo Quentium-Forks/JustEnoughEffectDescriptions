@@ -1,46 +1,35 @@
 
-modLoader="javafml" #mandatory
-
-loaderVersion="[40,)"
-
+modLoader="javafml"
+loaderVersion="[44,)"
 license="All rights reserved"
 
-[[mods]] #mandatory
+[[mods]]
+    modId="jeed"
+    version="${file.jarVersion}"
+    displayName="Just Enough Effect Descriptions"
+    logoFile="icon.png"
+    credits="MehVahdJukaar, Plantkillable"
+    authors="MehVahdJukaar"
+    itemIcon="minecraft:potion"
+    description="A JEI plugin that displays all status effects and how to obtain them"
 
-modId="jeed" #mandatory
-
-version="${file.jarVersion}" #mandatory
-
-displayName="Just Enough Effect Descriptions" #mandatory
-
-logoFile="icon.png" #optional
-
-credits="MehVahdJukaar, Plantkillable" #optional
-
-authors="MehVahdJukaar" #optional
-
-itemIcon="minecraft:potion" #catalogue icon
-description='''
-A JEI plugin that displays all status effects and how to obtain them
-'''
-
-[[dependencies.jeed]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[40,)" #mandatory
+[[dependencies.jeed]]
+    modId="forge"
+    mandatory=true
+    versionRange="[44,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.jeed]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.20)"
+    versionRange="[1.19.3,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.jeed]]
     modId="jei"
     mandatory=false
-    versionRange="[11.0.0.200,)"
+    versionRange="[12.2.0.17,)"
     ordering="NONE"
     side="CLIENT"

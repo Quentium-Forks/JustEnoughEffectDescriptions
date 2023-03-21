@@ -97,7 +97,7 @@ public class EffectInfoRecipe {
 
                     ItemStack stew = new ItemStack(Items.SUSPICIOUS_STEW);
 
-                    MobEffect effect = flowerblock.getSuspiciousStewEffect();
+                    MobEffect effect = flowerblock.getSuspiciousEffect();
                     SuspiciousStewItem.saveMobEffect(stew, effect, 200);
 
                     effectProvidingItems.computeIfAbsent(effect, i -> (new ItemStackList())).add(stew);
