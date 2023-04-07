@@ -1,10 +1,10 @@
 package net.mehvahdjukaar.jeed.recipes;
 
-
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import net.mehvahdjukaar.jeed.Jeed;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -55,7 +55,7 @@ public class PotionProviderRecipe implements Recipe<RecipeWrapper> {
 
     //let's hope this won't cause troubles
     @Override
-    public ItemStack getResultItem() {
+    public ItemStack getResultItem(RegistryAccess registryAccess) {
         return ItemStack.EMPTY;
     }
 
@@ -65,7 +65,7 @@ public class PotionProviderRecipe implements Recipe<RecipeWrapper> {
     }
 
     @Override
-    public ItemStack assemble(RecipeWrapper wrapper) {
+    public ItemStack assemble(RecipeWrapper wrapper, RegistryAccess registryAccess) {
         return ItemStack.EMPTY;
     }
 

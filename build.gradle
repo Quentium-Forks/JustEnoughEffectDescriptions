@@ -130,12 +130,11 @@ publishing {
 }
 
 dependencies {
-
     minecraft "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
 
-    implementation fg.deobf("curse.maven:stylish-effects-543661:4030905")
-    implementation fg.deobf("curse.maven:puzzles-lib-495476:4449586")
-    implementation fg.deobf("curse.maven:jei-238222:4405393")
+    implementation fg.deobf("curse.maven:stylish-effects-543661:4462745")
+    implementation fg.deobf("curse.maven:puzzles-lib-495476:4462485")
+    implementation fg.deobf("curse.maven:jei-238222:4473386")
 
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 }

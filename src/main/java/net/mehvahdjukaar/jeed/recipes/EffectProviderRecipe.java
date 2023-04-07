@@ -1,10 +1,10 @@
 package net.mehvahdjukaar.jeed.recipes;
 
-
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import net.mehvahdjukaar.jeed.Jeed;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -62,7 +62,7 @@ public class EffectProviderRecipe implements Recipe<RecipeWrapper> {
 
     //let's hope this won't cause troubles
     @Override
-    public ItemStack getResultItem() {
+    public ItemStack getResultItem(RegistryAccess registryAccess) {
         return ItemStack.EMPTY;
     }
 
@@ -72,7 +72,7 @@ public class EffectProviderRecipe implements Recipe<RecipeWrapper> {
     }
 
     @Override
-    public ItemStack assemble(RecipeWrapper wrapper) {
+    public ItemStack assemble(RecipeWrapper wrapper, RegistryAccess registryAccess) {
         return null;
     }
 
@@ -99,7 +99,6 @@ public class EffectProviderRecipe implements Recipe<RecipeWrapper> {
     public Collection<MobEffect> getEffects() {
         return allEffects ? ForgeRegistries.MOB_EFFECTS.getValues() : Collections.singletonList(effect);
     }
-
 
     public NonNullList<ItemStack> getProviders() {
         return providers;
@@ -161,7 +160,6 @@ public class EffectProviderRecipe implements Recipe<RecipeWrapper> {
             buffer.writeResourceLocation(res);
 
         }
-
 
     }
 }

@@ -1,6 +1,6 @@
 
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[45,)"
 license="All rights reserved"
 
 [[mods]]
@@ -16,20 +16,20 @@ license="All rights reserved"
 [[dependencies.jeed]]
     modId="forge"
     mandatory=true
-    versionRange="[44,)"
+    versionRange="[45,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.jeed]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.3,)"
+    versionRange="[1.19.4,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.jeed]]
     modId="jei"
     mandatory=false
-    versionRange="[12.2.0.17,)"
+    versionRange="[13.1.0.2,)"
     ordering="NONE"
     side="CLIENT"
